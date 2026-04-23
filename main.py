@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 from typing import Optional
 
 TICKET_MP = os.getenv("TICKET_MP", "F8537A18-6766-4DEF-9E59-426B4FEE2844")
-ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "").strip().replace("\n", "").replace("\r", "").replace(" ", "")
 MP_BASE = "https://api.mercadopublico.cl/servicios/v1/publico"
 
 SGS_PORTFOLIO = """
