@@ -100,8 +100,7 @@ async def fetch_licitaciones_mp(fecha: str, estado: str = "activas") -> dict:
     params = {
         "fecha": fecha,
         "ticket": TICKET_MP,
-        "estado": estado
-    }
+         }
     async with httpx.AsyncClient(timeout=30) as client:
         r = await client.get(url, params=params)
         r.raise_for_status()
