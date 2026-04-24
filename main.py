@@ -53,7 +53,7 @@ async def analizar(listado: list, consulta: str, total: int) -> str:
 
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
     msg = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-5",
         max_tokens=2000,
         system=f"""Eres el asistente comercial de SGS EHS Chile. Analiza licitaciones de Mercado Publico y detecta oportunidades.
 
