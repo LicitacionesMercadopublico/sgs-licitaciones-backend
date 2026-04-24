@@ -30,7 +30,8 @@ app.add_middleware(
 )
 
 def fecha_str(offset_dias: int = 0) -> str:
-    d = datetime.now() - timedelta(days=offset_dias)
+    from zoneinfo import ZoneInfo
+    d = datetime.now(ZoneInfo("America/Santiago")) - timedelta(days=offset_dias)
     return d.strftime("%d%m%Y")
 
 async def fetch_mp(fecha: str) -> dict:
